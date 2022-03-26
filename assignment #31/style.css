@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-family: "Lato", sans-serif;
+}
+/* DISPLAYS */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+/* HEADER */
+
+header {
+  height: 25vh;
+  font-size: 11px;
+}
+.top-header {
+  background: black;
+  height: 30%;
+}
+.bottom-header {
+  padding: 2em;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.bottom-header ul,
+.side-nav ul {
+  list-style-type: none;
+}
+
+.bottom-header li a,
+.side-nav li a {
+  text-decoration: none;
+  color: black;
+  margin: 1em;
+  display: block;
+}
+.bottom-header li a:hover,
+.side-nav li a:hover {
+  color: #3db5c4;
+}
+.icons {
+  font-size: 2em;
+  color: #3cb5c5;
+}
+
+/* FOOTER  */
+
+.main-container {
+  height: 45vh;
+  margin: 0 auto;
+  background: rgb(248, 248, 248);
+}
+.top-container {
+  margin: 0 auto;
+  width: 70%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.bottom-container {
+  height: 30%;
+  margin: 0 auto;
+  background: black;
+  justify-content: left;
+}
+.bottom-container p {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.2rem;
+}
+.about {
+  line-height: 1.4;
+  font-size: 14px;
+  width: 80%;
+  height: 70%;
+}
+
+.about h3,
+.about p,
+.about li,
+.about a {
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+}
+.about h3 {
+  text-decoration: underline;
+}
+
+/* HOME */
+
+#height {
+  height: 70vh;
+}
+#categories {
+  height: 100vh;
+  gap: 2em;
+  padding: 4em;
+}
+#brands {
+  height: 40vh;
+  text-align: center;
+  font-size: 1.5em;
+}
+.bg-image {
+  background: linear-gradient(rgba(28, 28, 28, 0.6), rgba(39, 39, 39, 0.4)),
+    url(https://images.pexels.com/photos/6894167/pexels-photo-6894167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+      center/cover no-repeat;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+.arrow {
+  color: #38757b;
+}
+.overlay-text {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  position: relative;
+}
+.overlay-text p {
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke: 1px #3db5c4;
+  -webkit-text-fill-color: transparent;
+  font-size: 6em;
+  font-weight: bolder;
+  animation: color-change 1.5s infinite;
+  width: 40%;
+}
+.tile {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  backdrop-filter: blur(1px);
+  cursor: pointer;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  position: absolute;
+}
+.tile a {
+  background: rgba(28, 28, 28, 0.7);
+  box-shadow: 2px 2px 1px #3db5c4;
+  z-index: 1;
+  color: white;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.tile:hover img {
+  opacity: 0.9;
+}
+.tile a:hover {
+  color: #3db5c4;
+}
+
+/* ANIMATION */
+
+@keyframes color-change {
+  0% {
+    -webkit-text-stroke: 1px #3db5c4;
+  }
+  50% {
+    -webkit-text-stroke: 2px #84eefc;
+  }
+  100% {
+    -webkit-text-stroke: 1px #3db5c4;
+  }
+}
+
+/* SIDE-NAV */
+aside {
+  float: left;
+}
+.side-nav {
+  padding: 1rem;
+  font-size: 1.4em;
+  width: 20%;
+  border: 1px solid #eaeff1;
+}
+.content {
+  padding: 3em;
+}
+article {
+  display: grid;
+  justify-self: center;
+  justify-items: center;
+  width: 90%;
+}
+article h3 {
+  height: 50px;
+  overflow: hidden;
+}
+article img {
+  width: 100%;
+  object-fit: cover;
+}
+
+article li {
+  list-style-type: none;
+  text-align: center;
+  background: white;
+  color: #333;
+}
+
+.cart-btn {
+  padding: 1em;
+  background: #333;
+  color: white;
+  border: none;
+  margin-bottom: 1.5em;
+  box-shadow: 0 3px #ccc;
+}
+.cart-btn:active {
+  background-color: #38757b;
+  box-shadow: 0 3px #999;
+  transform: translateY(4px);
+}
+
+/* CHECKOUT */
+
+.checkout {
+  min-width: 100%;
+  max-width: 60%;
+  overflow: hidden;
+  padding: 5em;
+}
+.checkout a {
+  color: red;
+  text-decoration: none;
+}
+.paymentBtn {
+  font-size: 1.3rem;
+  background: #3db5c4;
+  color: white;
+  border: 1px solid black;
+  padding: 1.1em;
+  width: 30%;
+  margin-top: 1em;
+}
+
+.remove {
+  font-size: 2rem;
+}
+
+/* ANGULAR ANIMATION */
+/* The starting CSS styles for the enter animation */
+
+main.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.checkout .ng-leave {
+  transition: 0.5s linear all;
+  opacity: 1;
+  transform: translateX(0);
+}
+.checkout .ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* FORM */
+
+form {
+  border: 1px solid black;
+  width: 30vw;
+  background: white;
+  padding: 2em;
+}
+
+.full-form {
+  grid-column: 1/3;
+}
+
+form input,
+form textarea,
+form button,
+form select {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.registerBtn {
+  background: #38757b;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 2em;
+}
+
+form input.ng-invalid.ng-touched {
+  border-bottom: 1px solid orange;
+}
+form input.ng-valid.ng-dirty {
+  border-bottom: 1px solid lightgreen;
+}
+
+.overlay {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 4em;
+  height: 40vh;
+  text-align: justify;
+  opacity: 0;
+  backdrop-filter: blur(2px);
+  margin-left: 2em;
+}

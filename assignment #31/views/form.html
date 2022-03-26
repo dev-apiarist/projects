@@ -1,0 +1,132 @@
+<section id="height" class="flex" style="position: relative">
+  <form name="registerForm" action="" class="grid-2" novalidate>
+    <h3 class="full-form flex">SIGN UP</h3>
+
+    <p class="full-form">
+      <label for=""> Username </label>
+
+      <input
+        type="text"
+        name="username"
+        ng-model="register.username"
+        placeholder=""
+        ng-required="true"
+      />
+      <span
+        ng-show="registerForm.username.$dirty && registerForm.username.$invalid || registerForm.username.$touched && registerForm.username.$invalid"
+      >
+        Username is required.
+      </span>
+    </p>
+
+    <p>
+      <input
+        type="text"
+        name="firstname"
+        ng-model="register.firstname"
+        ng-required="true"
+        placeholder="First Name"
+      />
+      <span
+        ng-show="registerForm.firstname.$dirty && registerForm.firstname.$invalid || registerForm.firstname.$touched && registerForm.firstname.$invalid"
+      >
+        First Name is required.
+      </span>
+    </p>
+
+    <p>
+      <input
+        type="text"
+        name="lastname"
+        ng-model="register.lastname"
+        ng-required="true"
+        placeholder="Last Name"
+      />
+      <span
+        ng-show="registerForm.lastname.$dirty && registerForm.lastname.$invalid || registerForm.lastname.$touched && registerForm.lastname.$invalid"
+      >
+        Last Name is required.
+      </span>
+    </p>
+
+    <p>
+      <label for=""> Email Address </label>
+      <input
+        name="email"
+        type="email"
+        ng-model="email"
+        ng-required="true"
+        placeholder="someone@domain.com"
+      />
+
+      <br />
+      <span
+        ng-show="registerForm.email.$dirty && registerForm.email.$invalid || registerForm.email.$touched && registerForm.email.$invalid"
+      >
+        <span ng-show="registerForm.email.$error.required"
+          >Email is required.</span
+        >
+        <span ng-show="registerForm.email.$error.email"
+          >Invalid email address.</span
+        >
+      </span>
+    </p>
+
+    <p>
+      <label for="">Phone Number</label>
+      <input
+        type="tel"
+        name="phone"
+        ng-model="register.phone"
+        placeholder="8-888-888-8888"
+        ng-required="true"
+      />
+      <span
+        ng-show="registerForm.phone.$dirty && registerForm.phone.$invalid || registerForm.phone.$touched && registerForm.phone.$invalid"
+      >
+        Invalid number.</span
+      >
+    </p>
+    <p class="full-form">
+      <label for=""> Date of Birth </label>
+      <input
+        type="date"
+        name="dob"
+        ng-model="register.dob"
+        ng-required="true"
+      />
+      <span
+        ng-show="registerForm.dob.$dirty && registerForm.dob.$invalid || registerForm.dob.$touched && registerForm.dob.$invalid"
+      >
+        Field is required.
+      </span>
+    </p>
+
+    <p>
+      <input
+        type="password"
+        placeholder="Create Password"
+        size=""
+        ng-required="true"
+      />
+    </p>
+
+    <p>
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        size=""
+        ng-required="true"
+      />
+    </p>
+    <p class="full-form">
+      <button class="registerBtn" onclick="toggleOverlay()">Register</button>
+    </p>
+  </form>
+  <div class="overlay" style="opacity: 0">
+    <p>
+      Thanks for becoming a member<br />
+      {{register.firstname}} {{register.lastname}}.
+    </p>
+  </div>
+</section>

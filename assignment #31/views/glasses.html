@@ -1,0 +1,33 @@
+<h1 class="flex">EYEGLASSES</h1>
+<aside class="side-nav">
+  <ul>
+    <li><a href="">CATEGORY</a></li>
+    <li><a href="">AVAILABILITY</a></li>
+    <li><a href="">GENDER</a></li>
+    <li><a href="">RIM</a></li>
+    <li><a href="">SHAPE</a></li>
+    <li><a href="">OCCASION</a></li>
+    <li><a href="">BRAND</a></li>
+    <li><a href="">COLLECTIONS</a></li>
+    <li><a href="">FRAME MATERIALS</a></li>
+    <li><a href="">FRONT COLOUR</a></li>
+    <li><a href="">SIZE</a></li>
+    <li><a href="">PRICE</a></li>
+  </ul>
+</aside>
+<section class="content grid-3">
+  
+  <article ng-repeat="glass in glasses | orderBy: order | filter: search">
+    <ul>
+      <li>
+        <img ng-src="{{glass.photo}}" alt="" />
+        <h3 class="flex">{{glass.name}}</h3>
+        <p style="font-weight: bold; color: #3db5c4; font-size: 1.2em">
+          {{glass.price | currency: "₹"}}
+        </p>
+      </li>
+    </ul>
+    <br />
+    <button class="cart-btn" ng-click="addCart(glass)">Add to Cart</button>
+  </article>
+</section>

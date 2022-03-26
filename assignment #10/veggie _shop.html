@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ital Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="shop.css" />
+
+    <style>
+      footer {
+        margin-top: 100px;
+        padding: 20px;
+        text-align: center;
+        background: #6eca55;
+        color: white;
+      }
+
+      ul,
+      li {
+        list-style: none;
+        display: flex;
+
+      }
+      li a {
+        display: inline-block;
+        
+      }
+      a.icon {
+        float: left;
+        width: 30px;
+      }
+      #more {
+        display: none;
+      }
+      .read {
+        width: 50%;
+        margin: 0 auto 0 auto;
+        text-align: center;
+      }
+      .read button {
+        width: 20%;
+        margin-top: 10px;
+        background: #6eca55;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="b1">
+      <input type="text" placeholder="Search..." />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li></li>
+      </ul>
+    </nav>
+
+    <div class="b2">
+      <img src="./img/pexels-fuzzy-rescue-3669638.jpg" alt="" />
+    </div>
+    <h1>Popular</h1>
+
+    <div class="cat">
+      <div class="card" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="./img/popular/pexels-pixabay-434295.jpg" alt="" />
+        <h3>Smoothie</h3>
+        <p><button>Add to Cart</button></p>
+      </div>
+      <div class="card" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="./img/popular/pexels-trang-doan-1092730.jpg" alt="" />
+        <h3>Assorted Fruits</h3>
+        <p><button>Add to Cart</button></p>
+      </div>
+      <div class="card" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="./img/popular/pexels-trang-doan-793759.jpg" alt="" />
+        <h3>Variety</h3>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+
+    <h1>New</h1>
+    <div class="cat">
+      <div class="card" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="./img/new/pexels-ella-olsson-1640768.jpg" alt="" />
+        <h3>Value Pack</h3>
+        <p><button>Add to Cart</button></p>
+      </div>
+      <div class="card" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="./img/new/pexels-daria-shevtsova-949069.jpg" alt="" />
+        <h3>Fruit Cereal</h3>
+        <p><button>Add to Cart</button></p>
+      </div>
+      <div class="card" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="./img/new/pexels-foodie-factor-566566.jpg" alt="" />
+        <h3>Egg on Pastry</h3>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="read">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+        distinctio, voluptatem iusto sapiente nostrum vero similique sit,
+        tenetur ea quisquam est. Id commodi magnam ratione tempore porro culpa!
+        Debitis, odio!<span id="dots">...</span
+        ><span id="more"
+          >dolor sit amet consectetur, adipisicing elit. Magnam dicta maiores
+          eius est debitis, architecto alias reiciendis harum, consequatur, aut
+          error? Maiores possimus et quam aliquid, cum tempora saepe quia.</span
+        >
+      </p>
+      <button onclick="myFunction()" id="myBtn">Read More</button>
+    </div>
+    <footer>
+      <p style="margin: auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        voluptatibus quo.
+      </p>
+    </footer>
+    <script src="shop.js"></script>
+    <script>
+      function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+      }
+    </script>
+  </body>
+</html>

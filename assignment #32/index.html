@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <main class="flex">
+      <section>
+        <form action="" name="jnForm" novalidate>
+          <div class="head flex">
+            <img
+              src="https://jmea.org/wp-content/uploads/2021/07/JN-Logo.png"
+              alt=""
+              width="60"
+            />
+
+            <h3 class="blue-text">
+              JAMAICA NATIONAL BUILDING SOCIETY <br />
+              CUSTOMER INFORMATION UPDATE TEMPLATE
+            </h3>
+          </div>
+          <br />
+          <div class="grid-2">
+            <div class="grid-2">
+              <label for="">Name:</label>
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  ng-required="true"
+                  ng-model="jn.name"
+                />
+
+                <span ng-show="jnForm.name.$touched && jnForm.name.$invalid">
+                  Enter a valid name.
+                </span>
+              </div>
+              <label for="">Address:</label>
+              <div>
+                <input
+                  type="text"
+                  name="address"
+                  ng-required="true"
+                  ng-model="jn.address"
+                />
+                <span
+                  ng-show="jnForm.address.$touched && jnForm.address.$invalid"
+                >
+                  Enter a valid address.
+                </span>
+              </div>
+              <label for="">Account Number(s)</label>
+              <div>
+                <input
+                  type="text"
+                  name="accountNum"
+                  ng-required="true"
+                  ng-model="jn.accountNum"
+                />
+
+                &nbsp;<input
+                  type="text"
+                  name="accountNum2"
+                  ng-required="true"
+                  ng-model="jn.accountNum2"
+                />
+                <span
+                  ng-show="jnForm.accountNum2.$touched && jnForm.accountNum2.$invalid || jnForm.accountNum.$touched && jnForm.accountNum.$invalid"
+                >
+                  Field is required
+                </span>
+              </div>
+            </div>
+            <div class="grid-2 align-right">
+              <label for="">Home Telephone No.</label>
+              <div>
+                <input
+                  type="tel"
+                  name="home"
+                  ng-required="true"
+                  ng-model="jn.homeNum"
+                />
+                <span ng-show="jnForm.home.$touched && jnForm.home.$invalid">
+                  Enter a valid telephone.
+                </span>
+              </div>
+
+              <label for="">Mobile No.</label>
+              <div>
+                <input
+                  type="tel"
+                  name="mobile"
+                  ng-required="true"
+                  ng-model="jn.mobileNum"
+                />
+                <span
+                  ng-show="jnForm.mobile.$touched && jnForm.mobile.$invalid"
+                >
+                  Enter a valid mobile.
+                </span>
+              </div>
+              <label for="">Identification Type</label>
+              <div>
+                <input
+                  type="text"
+                  name="idType"
+                  ng-required="true"
+                  ng-model="jn.idType"
+                />
+              </div>
+              &nbsp;
+              <div>
+                <input
+                  type="text"
+                  name="idType2"
+                  ng-required="true"
+                  ng-model="jn.idType2"
+                />
+                <span
+                  ng-show="jnForm.idType2.$touched && jnForm.idType2.$invalid || jnForm.idType.$touched && jnForm.idType.$invalid "
+                >
+                  Field is required.
+                </span>
+              </div>
+              <label for="">Identification No.</label>
+              <div>
+                <input
+                  type="text"
+                  name="idNum"
+                  ng-required="true"
+                  ng-model="jn.idNum"
+                />
+                <span ng-show="jnForm.idNum.$touched && jnForm.idNum.$invalid">
+                  Field is required.
+                </span>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="border grid-4">
+            <h3>CHANGE OF SERVICING BRANCH</h3>
+            &nbsp;
+            <p>From:</p>
+            <p class="align-center">To:</p>
+            &nbsp;
+            <p>BRANCH:</p>
+            <input type="month" />
+            &nbsp;
+            <input type="month" />
+            <p class="full-grid">
+              Kindly accept this as your authority to transfer the following
+              accoounts to the branch indicated above.
+            </p>
+
+            <label for="">ACCOUNT NUMBER(S):</label>
+            <input type="text" />
+            &nbsp;
+
+            <input type="text" />
+            &nbsp;
+
+            <input type="text" />
+            &nbsp;
+
+            <input type="text" />
+            &nbsp;
+
+            <input type="text" />
+            &nbsp;
+
+            <input type="text" />
+          </div>
+          <br />
+          <div class="border grid-4">
+            <h3>CHANGE OF ADDRESS</h3>
+            <p class="full-grid">
+              Kindly accept this as your authority to transfer the following
+              accounts to the branch indicated above.
+            </p>
+            &nbsp;
+
+            <p>&nbsp; Old Address</p>
+            &nbsp;
+
+            <p>&nbsp; Current Address</p>
+            <label for="" class="align-right blue-text">Address:</label>
+            <div class="border">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+            </div>
+            <label for="" class="align-right blue-text">Address:</label>
+            <div class="border">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+            </div>
+          </div>
+          <br />
+          <div class="border">
+            <h3>CHANGE OF NAME</h3>
+            <p class="full-grid">
+              Please be advised that my name has been changed as indicated
+              below:
+            </p>
+            <div class="grid-3 full-grid">
+              &nbsp;
+              <p>Title, First Name & Middle Name(s)</p>
+              <p>Surname</p>
+              <p class="blue-text">Previous Name</p>
+              <input type="text" class="border" />
+              <input type="text" class="border" />
+              &nbsp;
+              <p>Title, First Name & Middle Name(s)</p>
+              <p>Surname</p>
+              <p class="blue-text">Current Name</p>
+              <input type="text" class="border" />
+              <input type="text" class="border" />
+            </div>
+            <div class="grid-2">
+              <p>The change of name was occasioned by</p>
+              <p class="align-center">as per certificate numbered</p>
+            </div>
+            <div class="grid-4">
+              &nbsp;
+              <p>and dated</p>
+              <input type="month" />
+              &nbsp;
+            </div>
+          </div>
+          <br />
+          <div class="border">
+            <p>
+              I agree to hold the Jamaica National Building Society and its
+              staff harmless and indemnified from and against all claims
+              proceedings, losses, damages and expenses which may occur as a
+              result of these instructions.
+            </p>
+            <div class="grid-2">
+              <p class="align-right">Confirmed by:</p>
+              <input type="text" />
+              &nbsp;
+
+              <p class="align-center">Signature of Customer</p>
+              <p class="align-right">
+                Witnessed by Notary Public / J.P.: <br />
+                <span style="margin-right: 8%"> (for change of name) </span>
+              </p>
+
+              <input type="text" />
+              &nbsp;
+
+              <p class="align-center">Signature and Official Stamp/Seal</p>
+            </div>
+          </div>
+          <br />
+          <div class="border">
+            <h4 class="full-grid blue-text">FOR OFFICIAL USE:</h4>
+            <div class="grid-4">
+              <p>Recieved by:</p>
+
+              <div class="flex">
+                <p>Name:</p>
+                <input type="text" class="dashed" />
+              </div>
+              <div class="flex">
+                <p>Signature:</p>
+                <input type="text" class="dashed" />
+              </div>
+              <div class="flex">
+                <p>Date:</p>
+                <input type="date" class="dashed" />
+              </div>
+              <p>Approved by:</p>
+
+              <div class="flex">
+                <p>Name:</p>
+                <input type="text" class="dashed" />
+              </div>
+              <div class="flex">
+                <p>Signature:</p>
+                <input type="text" class="dashed" />
+              </div>
+              <div class="flex">
+                <p>Date:</p>
+                <input type="date" class="dashed" />
+              </div>
+            </div>
+            <div class="grid-2">
+              <p>
+                What documentary evidence did u recieve to indicate changes:
+              </p>
+              <input type="text" />
+            </div>
+
+            <p class="full-grid">Adjustment done on:</p>
+
+            <div class="grid-3" style="margin-left: 20%">
+              <p>Signature Card:</p>
+              <p class="grid-4">
+                <input type="checkbox" name="" id="" />
+                <label for="">Yes</label>
+                <input type="checkbox" name="" id="" />
+                <label for="">No</label>
+              </p>
+              &nbsp;
+
+              <p>Banking Card:</p>
+              <p class="grid-4">
+                <input type="checkbox" name="" id="" />
+                <label for="">Yes</label>
+                <input type="checkbox" name="" id="" />
+                <label for="">No</label>
+              </p>
+              &nbsp;
+
+              <p>Other:</p>
+              <p class="grid-4">
+                <input type="checkbox" name="" id="" />
+                <label for="">Yes</label>
+                <input type="checkbox" name="" id="" />
+                <label for="">No</label>
+              </p>
+            </div>
+          </div>
+          <input type="submit" value="SUBMIT" ng-disabled="jnForm.$invalid" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

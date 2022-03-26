@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eastal Jewelry</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="h-content flex">
+          <h1>Eastal</h1>
+
+          <div class="search flex">
+            <input type="search" name="" id="" placeholder="Search" /><img
+              src="./img/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <nav>
+          <ul class="flex">
+            <li><a href="">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#calc">Calculator</a></li>
+            <li><a href="">Gifts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container flex">
+        <div class="img-item zoom">
+          <img src="./img/pexels-andrea-piacquadio-790754.jpg" alt="" />
+        </div>
+        &nbsp;
+        <div class="img-item zoom">
+          <img src="./img/pexels-uzziiii-3385375.jpg" alt="" />
+        </div>
+        &nbsp;
+        <div class="img-item zoom">
+          <img src="./img/pexels-thức-lê-hữu-1390599.jpg" alt="" />
+        </div>
+      </div>
+      <div class="info flex">
+        <p style="color: white" id="col">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus at
+          ex unde doloribus quae, sint repellendus culpa amet consectetur.
+        </p>
+      </div>
+    </div>
+    <div class="page" id="collections">
+      <h1>Collections</h1>
+      <div class="container flex">
+        <div class="img-item zoom">
+          <img src="./img/pexels-jill-burrow-6858599.jpg" alt="" />
+          <div class="details flex">$</div>
+        </div>
+        &nbsp;
+        <div class="img-item zoom">
+          <img src="./img/pexels-castorly-stock-3641056.jpg" alt="" />
+          <div class="details flex">$$$</div>
+        </div>
+        &nbsp;
+        <div class="img-item zoom">
+          <img
+            src="./img/pexels-dayvison-de-oliveira-silva-5696003.jpg"
+            alt=""
+          />
+          <div class="details flex">$$</div>
+        </div>
+      </div>
+    </div>
+    <div class="page" id="calc">
+      <h1 style="color: goldenrod">Gold Calculator</h1>
+      <div class="calc">
+        <label for="carat">Carat:</label>
+        <select name="carat" id="carat" onchange="calculate()">
+          <option value="">Select Carat</option>
+          <option value="120">18k</option>
+          <option value="250">22k</option>
+        </select>
+        <br />
+        <label for="">Old Gold Return</label>
+        <input type="checkbox" id="returnGold" />
+        <p>
+          Value (USD):
+          <span
+            id="result"
+            style="
+              margin-left: 10px;
+              color: goldenrod;
+              font-size: 1.4rem;
+              font-weight: 700;
+            "
+          ></span>
+        </p>
+      </div>
+      <a href="jewelry.html" id="top">Back To Top</a>
+    </div>
+    <footer class="flex">&copy; Copyright(2021)</footer>
+    <script src="calc.js"></script>
+  </body>
+</html>

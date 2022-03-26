@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Shop</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 1.1rem;
+      }
+      body {
+        background: url(./img/pexels-christopher-farrugia-3581878.jpg)
+          center/cover no-repeat;
+      }
+      main {
+        width: 90%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        height: 100vh;
+        margin: 0 auto;
+      }
+      table {
+        height: 700px;
+        margin: 10px;
+      }
+      input {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form
+        action=""
+        name="myForm"
+        style="background: rgba(156, 23, 23, 0.8)"
+        onsubmit="return radioValidate()"
+      >
+        <table border="1">
+          <tr>
+            <th colspan="2">Pizza Shop 2.0</th>
+          </tr>
+          <tr>
+            <td><label for="" id="name">Name</label></td>
+
+            <td><input type="text" size="25" required /></td>
+          </tr>
+
+          <tr>
+            <td rowspan=""><label for="">Pizza Topping</label></td>
+            <td>
+              <input type="radio" name="toppings" id="" />Supreme
+              <br />
+              <input type="radio" name="toppings" id="" />Vegetarian
+              <br />
+              <input type="radio" name="toppings" id="" />Hawaiian
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Pizza Sauce</label></td>
+            <td>
+              <select name="" id="">
+                <option value="">Tomato</option>
+                <option value="">Pineapple</option>
+                <option value="">Peppers</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for=""> Optional Extras </label></td>
+            <td>
+              <input type="checkbox" name="extra_cheese" id="" />Extra Cheese
+              <input type="checkbox" name="gluten_free_base" id="" />Gluten Free
+              Base
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <label for="">Delivery Instructions:</label>
+              <br />
+              <textarea name="" id="" cols="40" rows="7"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Send my Order" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </main>
+    <script>
+      function radioValidate() {
+        let radios = document.getElementsByName("toppings");
+        let formValid = false;
+        let i = 0;
+        while (!formValid && i < radios.length) {
+          if (radios[i].checked) formValid = true;
+          i++;
+        }
+        if (!formValid) {
+          alert("Must select a topping");
+          return formValid;
+        }
+      }
+    </script>
+  </body>
+</html>

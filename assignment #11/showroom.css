@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+header img {
+  width: 300px;
+}
+ul,
+li,
+a {
+  display: flex;
+  text-decoration: none;
+  color: red;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  align-items: center;
+  padding: 10px;
+}
+header li {
+  font-size: 30px;
+  margin-right: 40px;
+}
+body {
+  background: url(./img/pexels-sourav-mishra-2317519.jpg) center/cover no-repeat;
+}
+main {
+  display: flex;
+  align-items: center;
+height: 80vh;
+}
+.inv-btn {
+  width: 20%;
+  padding: 20px;
+  border-radius: 50px;
+  margin-left: 60%;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+}
+a {
+  color: white;
+}
+button:hover {
+  background: rgb(182, 0, 0);
+}
+
+footer,
+li {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 20px;
+}
+body::before {
+  content: "";
+  background-color: rgb(96, 98, 126);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  mix-blend-mode: hard-light;
+  position: absolute;
+}

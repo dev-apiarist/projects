@@ -1,0 +1,104 @@
+<form name="contactForm" action="" class="grid-2" ng-submit="sendMessage()">
+  <h3 class="full-form flex">SIGN UP</h3>
+
+  <p class="full-form">
+    <label for=""> Username </label>
+
+    <input
+      type="text"
+      name="userName"
+      ng-model="userName"
+      placeholder=""
+      required
+    />
+  </p>
+
+  <p>
+    <input
+      type="text"
+      name="firstName"
+      ng-model="firstName"
+      required
+      placeholder="First Name"
+    />
+  </p>
+
+  <p>
+    <input
+      type="text"
+      name="lastName"
+      ng-model="lastName"
+      required
+      placeholder="Last Name"
+    />
+  </p>
+
+  <p>
+    <label for=""> Email Address </label>
+    <input
+      name="email"
+      type="email"
+      ng-model="email"
+      required
+      placeholder="someone@domain.com"
+    />
+
+    <br />
+    <span
+      ng-show="contactForm.email.$dirty && contactForm.email.$invalid || contactForm.email.$touched"
+    >
+      <span ng-show="contactForm.email.$error.required"
+        >Email is required.</span
+      >
+      <span ng-show="contactForm.email.$error.email"
+        >Invalid email address.</span
+      >
+    </span>
+  </p>
+
+  <p>
+    <label for="">Phone Number</label>
+    <input
+      type="tel"
+      name="phone"
+      ng-model="contact.phone"
+      placeholder="8-888-888-8888"
+      required
+    />
+  </p>
+  <p class="full-form">
+    <label for=""> Date of Birth </label>
+    <input type="date" name="dob" ng-model="contact.dob" required />
+  </p>
+
+  <p>
+    <input type="password" placeholder="Create Password" size="" required />
+  </p>
+
+  <p>
+    <input type="password" placeholder="Confirm Password" size="" required />
+  </p>
+
+  <h4 class="full-form flex">
+    ----------------------------------PAYMENT
+    DETAILS----------------------------------
+  </h4>
+
+  <label for="">Cardholder Name</label>
+  <input type="text" required />
+
+  <label for="">Card Number</label>
+  <input type="text" placeholder="8888-8888-8888-8888" required />
+
+  <label for="">Expiration Date</label>
+  <input type="month" name="" id="" required />
+
+  <label for=""
+    ><span><i class="fas fa-credit-card"></i></span> CVC</label
+  >
+  <input type="text" placeholder="888" required />
+
+  <p class="full-form">
+    <input type="submit" value="Register" />
+  </p>
+</form>

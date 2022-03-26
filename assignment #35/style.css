@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* border: 1px solid black; */
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+header {
+  grid-template-columns: 1fr 2fr;
+  width: 80%;
+  padding: 20px 0;
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin: 0 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* SLIDESHOW */
+
+#slide-container {
+  position: relative;
+  border-bottom: 4px solid black;
+}
+
+.slides {
+  display: none;
+  height: 80vh;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.slides-overlay {
+  background: url("	http://www.spencerplaza.co.in/assets/images/banner-pattern.png");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.indicator-wrapper {
+  width: 40%;
+  text-align: center;
+  background: #111111;
+  padding: 10px 60px;
+  position: absolute;
+  bottom: -19px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.indicator {
+  margin: 5px 7px;
+  min-width: 16%;
+  height: 4px;
+  background: orangered;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.active {
+  background: white;
+}
+.overlay-text {
+  position: absolute;
+  line-height: 1.3;
+  font-weight: 100;
+  font-size: 5em;
+  color: white;
+  text-align: right;
+  text-shadow: 1px 4px 4px rgb(0 0 0 / 30%);
+  width: 60%;
+  top: 60%;
+  right: 20%;
+}
+
+/* GRID-4 */
+.tile-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  padding: 10em 0;
+  overflow: hidden;
+}
+.tile-container .grid {
+  grid-template-columns: 1fr 1fr;
+  margin-top: -6rem;
+}
+.tile {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.tile-heading {
+  background: black;
+  color: white;
+}
+
+.tile-heading-left,
+.tile-heading-right,
+.contact-heading {
+  overflow: hidden;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  background: black;
+  position: absolute;
+  padding: 25px 30px;
+
+  width: 50%;
+}
+.tile-heading-left {
+  text-align: right;
+  top: 40%;
+  left: -30%;
+}
+
+.tile-heading-right {
+  top: 40%;
+  right: -30%;
+  z-index: 1;
+}
+
+.tile:nth-child(odd) {
+  margin-bottom: 350px;
+  padding-right: 0;
+}
+.tile:nth-child(even) {
+  margin-top: 350px;
+  padding-left: 0;
+}
+
+.tile:hover img,
+.contact-us img:hover {
+  transform: scale(1.07);
+  transition: all 0.6s ease 0s;
+}
+.tile:hover h3 {
+  background-color: red;
+}
+
+.tile::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border: 1px solid grey;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+}
+.tile:nth-child(even)::after {
+  left: auto;
+  right: 0;
+}
+
+/* CONTACT */
+
+.contact-us {
+  padding: 60px 0 30px;
+  position: relative;
+  justify-content: space-evenly;
+  background: #e7e7e7;
+}
+.contact-us-img-wrapper {
+  overflow: hidden;
+}
+.contact-heading {
+  width: 20%;
+  height: 20%;
+  right: 15%;
+  bottom: 10px;
+}
+/* BRANDS */
+
+.brands {
+  padding: 30px 0;
+  font-size: 2em;
+}
+.brands h3 {
+  margin-right: 10rem;
+}
+.brands span {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.brands .grid {
+  margin: 0 2rem;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* FOOTER */
+footer {
+  background: #111111;
+
+  color: white;
+}
+footer .grid {
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: baseline;
+  font-size: 16px;
+}
+.footer-item {
+  padding: 4rem 7rem;
+
+  width: 100%;
+  height: 100%;
+}
+.footer-item :nth-child(n) {
+  padding-bottom: 1rem;
+}
+.footer-item .grid {
+  justify-items: left;
+  align-items: baseline;
+  gap: 30%;
+  grid-template-columns: 1fr, 1fr;
+}
+.footer-item .grid ul li {
+  list-style-type: none;
+}
+.footer-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+.footer-item a:nth-child(odd) {
+  margin: 0 1.2rem;
+}
+.footer-item h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.footer-item h3::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 1px;
+  background: orangered;
+  bottom: 5px;
+  left: 0;
+}
+
+.footer-copyright {
+  border-top: 1px solid #292929;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}

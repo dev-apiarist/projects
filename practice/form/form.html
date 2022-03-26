@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      form {
+        border: 1px solid black;
+        width: 500px;
+        border-radius: 30px;
+        margin-top: 2%;
+        margin-left: 15%;
+        font-size: 15px;
+      }
+      body {
+        background: url(./img/pexels-karolina-grabowska-5706220.jpg)
+          center/cover no-repeat;
+      }
+      input {
+        margin: 8px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 3em;
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      input[type="color"] {
+        border-radius: 50%;
+        width: 30px;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <h1>Student Registration</h1>
+    <form action="" name="myForm" style="padding: 50px">
+      <label for="">Date:</label>
+      <input type="datetime-local" name="" id="" />
+      <br />
+      <label for="">Registration No.</label>
+      <input type="text" />
+      <br />
+      <label for="name">Name:</label>
+      <input type="text" name="name" onsubmit="validateForm" />
+      <br />
+      <hr />
+      <h3>Gender</h3>
+      <label for="male">Male</label>
+      <input type="radio" name="male" id="" />
+      <label for="female">Female</label>
+      <input type="radio" name="male" id="" />
+      <br />
+      <label for="age">Age:</label>
+      <input type="date" name="" id="" />
+      <br />
+      <hr />
+      <label for="">Courses</label>
+      <input type="number" name="" id="" min="1" max="10" />
+      <br />
+      <br />
+      <label for="sub">Subjects</label>
+      <select name="subjects" id="">
+        <option value="">English</option>
+        <option value="">French</option>
+        <option value="">Spanish</option>
+      </select>
+      <br />
+      <br />
+      <label for="">Additional Subjects:</label>
+      <input type="search" />
+      <br />
+      <hr />
+      <label for="">Intake Month </label>
+      <input type="month" name="" id="" />
+      <br />
+
+      <label for="">Intake Week </label>
+      <input type="week" name="" id="" />
+      <br />
+      <label for="">Class Time:</label>
+      <input type="time" name="" id="" />
+      <hr />
+
+      <label for="">Upload Documents:</label>
+      <input type="file" name="" id="" />
+      <label for="pwd">Encrypt Documents:</label>
+      <input type="password" name="" id="" />
+      <br />
+      <br />
+      <h3>(Optional)</h3>
+      <label for="">LinkedIn Url</label>
+      <input type="url" name="" id="" required />
+      <br />
+      <label for="favcolor">Choose Favorite Color: </label>
+      <input type="color" value="#fc0703" />
+      <br />
+      <label for="">Rate Form:</label>
+      <input type="range" name="" id="" min="0" max="10" />
+      <br /><br />
+      <hr />
+      <br />
+      <input
+        type="button"
+        value="submit"
+        onclick="validateForm()"
+        style="
+          padding: 5px;
+          width: 40%;
+          margin-left: 10%;
+          background: lightgreen;
+          border-radius: 10px;
+        "
+      />
+      <input
+        type="reset"
+        value="clear"
+        onclick="resetForm()"
+        style="
+          padding: 5px;
+          width: 40%;
+          background: tomato;
+          border-radius: 10px;
+        "
+      />
+    </form>
+
+    <script type="text/javascript">
+      function submitForm() {
+        alert("This page has been submitted");
+      }
+      function resetForm() {
+        alert("This page has been reset");
+      }
+    </script>
+  </body>
+</html>

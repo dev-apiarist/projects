@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+/* DISPLAYS */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+}
+.grid-column-2 {
+  grid-column: 1/3;
+}
+/* HEADER */
+header {
+  width: 100%;
+  background: white;
+  z-index: 1;
+  font-size: 1.3em;
+}
+
+.top-banner {
+  height: 5vh;
+  background: whitesmoke;
+  color: black;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav li a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  padding: 1.5em;
+}
+
+/* SECTION-1 */
+
+.grid-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.grid-image img {
+  padding: 10%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.large-text {
+  background: #f8f8f8;
+  font-size: 2.5rem;
+  padding: 10%;
+  text-align: center;
+}
+.large-text a {
+  text-decoration: none;
+  color: blue;
+}
+.overlay {
+  position: absolute;
+  font-size: 4em;
+  top: 0;
+  color: rgb(255, 166, 0);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backdrop-filter: blur(1px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+}
+.tile {
+  width: 35%;
+  height: 35%;
+}
+.tile a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  background: rgb(255, 178, 35);
+  width: 100%;
+  height: 100%;
+}
+.newsletter {
+  font-weight: 900;
+  font-size: 3em;
+  font-style: italic;
+  color: #2a5276;
+  width: 70%;
+  height: 40vh;
+  margin: 2%;
+}
+.signUp {
+  height: 25vh;
+}
+.newsletter input {
+  margin-top: 2%;
+  width: 70%;
+  font-size: 1.1em;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.newsletter button {
+  font-size: 1em;
+  width: 30%;
+  border-radius: 10px;
+  border: none;
+  background: #c5950d;
+  margin: 2%;
+  color: white;
+}
+
+/* FORM */
+
+.form-container {
+  border: 1px solid black;
+  padding: 3%;
+  width: 55vw;
+  min-height: 100vh;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 7px 2px -2px rgb(53, 53, 53);
+}
+form {
+  width: 100%;
+  font-weight: bolder;
+  font-size: 12px;
+  position: relative;
+}
+form input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+/* FORM-HEAD */
+.form-header {
+  height: 20%;
+}
+#profile {
+  border: 1px solid black;
+  padding: 5%;
+  color: rgb(36, 36, 36);
+}
+
+table td {
+  width: 1em;
+  height: 1em;
+}
+table input {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+}
+form > .grid-4 {
+  margin-bottom: 2%;
+}
+
+fieldset {
+  border: 1px solid black;
+  padding: 4%;
+}
+legend {
+  margin: 0 auto;
+}
+textarea {
+  resize: none;
+}
+
+form > input[type="submit"] {
+  float: right;
+  padding: 1.2em;
+  margin-top: 3em;
+  color: white;
+  background: rgb(36, 36, 36);
+  width: 15%;
+}
+/* FOOTER */
+footer {
+  margin-top: 5%;
+  height: 15vh;
+  color: white;
+  font-size: 1.3rem;
+  background: #2a5276;
+}

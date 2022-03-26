@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form name="contactForm" action="" class="grid">
+          <h1 class="full-width">CONTACT OUR SALES TEAM</h1>
+
+          <p>
+            <label for="">
+              <span style="color: red">* </span> First Name:</label
+            >
+            <br /><input
+              type="text"
+              name="firstName"
+              ng-model="firstName"
+              required
+            />
+            <span
+              ng-show="contactForm.firstName.$touched && contactForm.firstName.$invalid"
+              >First Name is required.</span
+            >
+          </p>
+          <p>
+            <label for=""> <span style="color: red">* </span>Last Name:</label
+            ><br />
+            <input type="text" name="lastName" ng-model="lastName" required />
+            <span
+              ng-show="contactForm.lastName.$touched && contactForm.lastName.$invalid"
+              >Last Name is required.</span
+            >
+          </p>
+          <p>
+            <label for="">
+              <span style="color: red">* </span>Email Address:</label
+            >
+            <br /><input name="email" type="email" ng-model="email" required />
+            <span
+              ng-show="contactForm.email.$dirty && contactForm.email.$invalid || contactForm.email.$touched"
+            >
+              <span ng-show="contactForm.email.$error.required"
+                >Email is required.</span
+              >
+              <span ng-show="contactForm.email.$error.email"
+                >Invalid email address.</span
+              >
+            </span>
+          </p>
+          <p>
+            <label for="">
+              <span style="color: red">* </span>Phone Number:</label
+            >
+            <br /><input
+              type="tel"
+              name="phone"
+              ng-model="contact.phone"
+              ng-required="true"
+            />
+            <span
+              ng-show="contactForm.phone.$touched && contactForm.phone.$invalid"
+              >Phone Number is required.</span
+            >
+          </p>
+          <p class="full-width">
+            <label for="">
+              <span style="color: red">* </span>Company Name:</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="To select, begin typing."
+              size="30"
+            />
+          </p>
+          <p>
+            <label for="">How did you hear about us?</label>
+            <br />
+            <select name="" id="" style="width: 100%">
+              <option value="">Social Media
+                
+              </option>
+            </select>
+          </p>
+          <p class="full-width">
+            <label for="">Comments:</label><br />
+            <textarea name="" id="" cols="50" rows="2"></textarea>
+          </p>
+          <p>
+            <input type="submit" value="Submit" />
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

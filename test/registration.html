@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBS Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+      .cells input[type="text"] {
+        border: none;
+        text-align: center;
+      }
+      form {
+        border: 1px solid black;
+        padding: 100px;
+      }
+      .content {
+        width: 50%;
+        margin: 100px auto 100px auto;
+      }
+      form input {
+        width: 100%;
+      }
+      .para {
+        margin: 0 auto 0 auto;
+        width: 90%;
+      }
+      input[type="submit"] {
+        padding: 10px;
+        width: 100%;
+        background: red;
+        border-radius: 5px;
+        margin: 50px auto 0 auto;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="./img/dbs_logo.svg" alt="" /></a>
+      </div>
+      <div class="btn-grp">
+        <div class="btn">
+          India &nbsp;<span><i class="fas fa-caret-down"></i></span>
+        </div>
+        <div class="btn" style="background: red; color: white">
+          <span><i class="fas fa-lock" style="color: white"></i></span
+          >&nbsp;Login
+        </div>
+        <div class="btn">
+          <a
+            href="registration.html"
+            style="text-decoration: none; color: black"
+            >Register</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <form action="" name="myForm" onsubmit="validateEmail()">
+        <label for="">Name of Customer:</label>
+        <br />
+        <input type="text" required />
+        <br />
+        <label for="">Mobile Number:</label>
+        <br />
+        <input type="tel" required />
+        <br />
+        <label for="">Email:</label>
+        <br />
+        <input type="email" name="" id="myEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+        <br />
+        <label for="">Date of Birth:</label>
+        <br />
+        <input type="date" name="" id="" />
+        <br /><br />
+        <table>
+          <tr>
+            <th colspan="16">My Account Numbers</th>
+            <th>Single/Joint* Accounts</th>
+            <th>(Branch Use) Transaction Rights (Y/N)</th>
+            <th>(Branch Use) ** Limited Transaction Rights (Y/N)</th>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+          <tr class="cells">
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+            <td><input type="text" name="" id="" /></td>
+          </tr>
+        </table>
+        <br />
+        <div class="para">
+          <p style="font-weight: bold">
+            * Rights on the OnLineDBS Service will be same as that in your
+            account at the branch. ** Transaction rights to transfer funds
+            within own CIF, e-TDR/e-STDR and new a/c opening request through
+            branch intervention
+          </p>
+          <br />
+          <p>
+            I have read the provisions contained in the “Terms of Service (Terms
+            &amp; Conditions) document” of “OnlineDBS” and accept them. I agree
+            that the transactions executed over OnlineDBS under my Username and
+            Password will be binding on me.
+          </p>
+          <br /><br />
+          <div style="display: flex; justify-content: space-between">
+            <p>Customer's Signature(Upload)</p>
+            <p>Date:</p>
+          </div>
+        </div>
+        <input type="submit" value="Sign Up" onclick="validateEmail()"/>
+      </form>
+    </div>
+    <script>
+      function validateEmail() {
+        var x = document.getElementById("myEmail").pattern;
+        document.getElementById("demo").innerHTML = x;}
+    </script>
+  </body>
+</html>

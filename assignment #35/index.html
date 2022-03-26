@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="grid">
+      <div style="margin-right: auto">
+        <img
+          src="	http://www.spencerplaza.co.in/assets/images/spencerplaza-logo.png
+"
+          alt=""
+        />
+      </div>
+      <nav>
+        <ul class="flex">
+          <li><a href="">Shopping</a></li>
+          <li><a href="">Entertainment</a></li>
+          <li><a href="">Dining</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Deals</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="slide-container">
+        <div class="slides-overlay"></div>
+        <a href="" class="slides">
+          <img
+            src="http://www.spencerplaza.co.in/assets/images/banner-01.jpg
+"
+            alt=""
+          />
+        </a>
+        <a href="" class="slides">
+          <img
+            src="http://www.spencerplaza.co.in/assets/images/banner-02.jpg
+"
+            alt=""
+          />
+        </a>
+        <a href="" class="slides">
+          <img
+            src="http://www.spencerplaza.co.in/assets/images/banner-03.jpg
+"
+            alt=""
+          />
+        </a>
+        <a href="" class="slides">
+          <img
+            src="http://www.spencerplaza.co.in/assets/images/banner-04.jpg
+"
+            alt=""
+          />
+        </a>
+        <a href="" class="slides">
+          <img
+            src="http://www.spencerplaza.co.in/assets/images/banner-05.jpg
+"
+            alt=""
+          />
+        </a>
+        <div class="indicator-wrapper">
+          <span class="indicator" onclick="currentSlide(1)"></span>
+          <span class="indicator" onclick="currentSlide(2)"></span>
+          <span class="indicator" onclick="currentSlide(3)"></span>
+          <span class="indicator" onclick="currentSlide(4)"></span>
+          <span class="indicator" onclick="currentSlide(5)"></span>
+        </div>
+        <div class="overlay-text">
+          <p>
+            Welcome to <br />
+            <span style="font-weight: 900; font-size: 7rem">Spencer Plaza</span>
+          </p>
+        </div>
+      </section>
+      <section class="tile-container">
+        <div class="grid">
+          <a href="" class="tile">
+            <div class="img-wrapper">
+              <img
+                src="http://www.spencerplaza.co.in/assets/images/shopping.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="tile-heading-right">
+              Shopping <span style="float: right">+</span>
+            </h3>
+          </a>
+          <a href="" class="tile">
+            <div class="img-wrapper">
+              <img
+                src="http://www.spencerplaza.co.in/assets/images/dining.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="tile-heading-left">
+              <span style="float: left">+</span>Dining
+            </h3>
+          </a>
+        </div>
+        <div class="grid">
+          <a href="" class="tile">
+            <div class="img-wrapper">
+              <img
+                src="http://www.spencerplaza.co.in/assets/images/events.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="tile-heading-right">
+              Entertainment <span style="float: right">+</span>
+            </h3>
+          </a>
+          <a href="" class="tile">
+            <div class="img-wrapper">
+              <img
+                src="http://www.spencerplaza.co.in/assets/images/deals.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="tile-heading-left">
+              <span style="float: left">+</span>Deals & Offers
+            </h3>
+          </a>
+        </div>
+      </section>
+      <section class="contact-us flex">
+        <img
+          src="http://www.spencerplaza.co.in/assets/images/facebook.jpg"
+          alt=""
+          style="transform: none"
+        />
+        <div class="contact-us-img-wrapper">
+          <img
+            src="	http://www.spencerplaza.co.in/assets/images/reach-us.jpg"
+            alt=""
+          />
+          <div class="contact-heading">
+            <h3>How to Reach Us <span style="float: right">+</span></h3>
+          </div>
+        </div>
+      </section>
+      <section class="brands flex">
+        <h3>Brands</h3>
+        <span>&#8249;</span>
+        <div class="grid">
+          <img
+            src="http://www.spencerplaza.co.in/assets/images/brands/allen-solly.jpg"
+            alt=""
+          /><img
+            src="	http://www.spencerplaza.co.in/assets/images/brands/adidas.jpg"
+            alt=""
+          /><img
+            src="http://www.spencerplaza.co.in/assets/images/brands/blackberrys.jpg"
+            alt=""
+          />
+        </div>
+        <span>&#8250;</span>
+      </section>
+    </main>
+    <footer>
+      <div class="grid">
+        <div class="footer-item">
+          <h3>Quick Links</h3>
+          <div class="grid">
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Mall Directory</li>
+              <li>Contact</li>
+              <li>Shopping</li>
+            </ul>
+            <ul>
+              <li>Entertainment</li>
+              <li>Dining</li>
+              <li>Events</li>
+              <li>Deals</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-item">
+          <h3>Contact Us</h3>
+          <p>
+            <span><i class="fas fa-phone-alt"></i></span>
+            +91-44-2491001
+          </p>
+          <p>
+            <span><i class="fas fa-envelope"></i></span>
+            support@spencerplaza.co.in
+          </p>
+        </div>
+        <div class="footer-item">
+          <h3>Follow us</h3>
+          <a href=""
+            ><span><i class="fab fa-facebook-f"></i></span></a
+          ><a href=""
+            ><span><i class="fab fa-twitter"></i></span> </a
+          ><a href=""
+            ><span><i class="fab fa-instagram"></i></span></a
+          ><a href=""
+            ><span><i class="fab fa-google-plus-g"></i></span
+          ></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          Copyright &copy; - Spencer Plaza Mall - All rights reserved.Powered by
+          <span
+            ><img
+              src="http://www.spencerplaza.co.in/assets/images/icons/icon-og.png"
+              alt=""
+          /></span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

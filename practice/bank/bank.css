@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid black;
+}
+.welc {
+  background: url(./img/pexels-pixabay-164501.jpg) center/cover no-repeat;
+  height: 300px;
+}
+.banner {
+  padding: 30px;
+}
+nav {
+  text-align: center;
+  background: maroon;
+  padding: 5%;
+}
+a {
+  text-decoration: none;
+  margin: 30px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+}

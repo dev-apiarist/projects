@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C-Table</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+      }
+      td {
+        border: 1px solid black;
+        empty-cells: hide;
+      }
+      div {
+        width: 400px;
+        height: 400px;
+      }
+      #yt {
+        border: none;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+          <td id="yt"></td>
+        </tr>
+        <tr>
+          <td id="yt"></td>
+          <td rowspan="3" style="background: rgb(74, 176, 229)"></td>
+          <td colspan="3" rowspan="1" style="background: rgb(74, 92, 229)"></td>
+          <td colspan="2" rowspan="2" style="background: rgb(99, 74, 229)"></td>
+          <td rowspan="2" style="background: rgb(147, 74, 229)"></td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="background: rgb(74, 216, 229)"></td>
+          <td colspan="3" style="background: rgb(74, 125, 229)"></td>
+          <td style="background: rgb(213, 74, 229)"></td>
+        </tr>
+        <tr>
+          <td style="background: rgb(74, 229, 191)"></td>
+          <td id="yt" colspan="4"></td>
+
+          <td colspan="2" style="background: rgb(229, 74, 209)"></td>
+        </tr>
+        <tr>
+          <td
+            colspan="2"
+            rowspan="2"
+            style="background: rgb(74, 229, 121)"
+          ></td>
+          <td colspan="5" id="yt"></td>
+          <td colspan="2" style="background: rgb(229, 74, 125)"></td>
+        </tr>
+        <tr>
+          <td colspan="8" id="yt"></td>
+        </tr>
+        <tr>
+          <td rowspan="4" colspan="2" style="background: rgb(70, 229, 14)"></td>
+          <td colspan="4" id="yt"></td>
+          <td colspan="4" style="background: rgb(255, 36, 0)"></td>
+        </tr>
+        <tr>
+          <td colspan="5" id="yt"></td>
+          <td rowspan="5" style="background: rgb(255, 132, 0)"></td>
+          <td rowspan="3" style="background: rgb(255, 78, 0)"></td>
+          <td id="yt"></td>
+        </tr>
+
+        <tr>
+          <td style="background: rgb(229, 220, 74)"></td>
+        </tr>
+        <tr>
+          <td colspan="5" style="background: rgb(255, 198, 0)"></td>
+        </tr>
+        <tr>
+          <td id="yt"></td>
+          <td style="background: rgb(183, 229, 74)"></td>
+          <td colspan="2" style="background: rgb(255, 222, 0)"></td>
+          <td colspan="3" style="background: rgb(255, 156, 0)"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

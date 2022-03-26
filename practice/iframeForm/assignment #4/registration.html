@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="reg.css" />
+  </head>
+  <body>
+    <h1>Student Registration</h1>
+    <div class="frame">
+      <form
+        name="myForm"
+        method="post"
+        action=""
+        onsubmit="return validateEmail();"
+      >
+        <div class="row">
+          <div class="col-25"><label for="fname">First Name:</label></div>
+          <div class="col-75">
+            <input type="text" name="fname" id="" required />
+          </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="lname" id="" required />
+          </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-25">
+            <label for="dob">Date Of Birth:</label>
+          </div>
+          <div class="col-75">
+            <input type="date" name="dob" id="" required />
+          </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-25"><label for="email">Email:</label></div>
+          <div class="col-75">
+            <input type="text" name="email" id="" required />
+          </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-25">
+            <label for="tel">Tel #:</label>
+          </div>
+          <div class="col-75">
+            <input type="tel" name="tel" id="" required />
+          </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-25"><label for="">Gender:</label></div>
+          <div class="col-75">
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="" required />
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" id="" required />
+            <label for="gender">Other</label>
+            <input type="radio" name="gender" id="" required />
+          </div>
+        </div>
+ 
+        <div class="row">
+          <div class="col-25"><label for="address">Address:</label></div>
+          <div class="col-75">
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="row"><input type="submit" value="Submit" /></div>
+      </form>
+    </div>
+ 
+    <script>
+ 
+      function validateEmail() {
+        var x = document.myForm.email.value;
+        var atposition = x.indexOf("@");
+        var dotposition = x.lastIndexOf(".");
+        if (
+          atposition < 1 ||
+          dotposition < atposition + 2 ||
+          dotposition + 2 >= x.length
+        ) {
+          alert("Please enter a valid e-mail address")
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

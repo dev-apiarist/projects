@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/* DISPLAYS */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+}
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+}
+.top-banner {
+  background: #2a5276;
+  height: 5vh;
+}
+
+nav {
+  width: 50%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav li a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  padding: 1.5em;
+}
+
+/* MAIN */
+main {
+  margin-top: 10%;
+}
+/* SECTION-1 */
+
+.grid-image {
+  width: 100%;
+  height: 80vh;
+}
+.grid-image img {
+  padding: 10%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.large-text {
+  background: #f8f8f8;
+  font-size: 2.5rem;
+  padding: 10%;
+  text-align: center;
+}
+
+.tile {
+  width: 35%;
+  height: 35%;
+}
+.tile a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  background: #2a5276;
+  width: 100%;
+  height: 100%;
+}
+.newsletter {
+  font-weight: 900;
+  font-size: 3em;
+  font-style: italic;
+  color: #2a5276;
+  width: 70%;
+  height: 40vh;
+  margin: 2%;
+}
+.signUp {
+  height: 25vh;
+}
+.newsletter input {
+  margin-top: 2%;
+  width: 70%;
+  font-size: 1.1em;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.newsletter button {
+  font-size: 1em;
+  width: 30%;
+  border-radius: 10px;
+  border: none;
+  background: #c5950d;
+  margin: 2%;
+  color: white;
+}
+
+/* FORM */
+
+.form-container {
+  border: 1px solid black;
+  padding: 3%;
+  width: 55vw;
+  min-height: 100vh;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 7px 2px -2px rgb(53, 53, 53);
+}
+form {
+  width: 100%;
+  font-weight: bolder;
+  font-size: 12px;
+  position: relative;
+}
+form input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+/* FORM-HEAD */
+.form-header {
+  height: 20%;
+}
+#profile {
+  border: 1px solid black;
+  padding: 5%;
+  color: rgb(36, 36, 36);
+}
+
+table td {
+  width: 1em;
+  height: 1em;
+}
+table input {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+}
+form > .grid-4 {
+  margin-bottom: 2%;
+}
+
+fieldset {
+  border: 1px solid black;
+  padding: 4%;
+}
+legend {
+  margin: 0 auto;
+}
+textarea {
+  resize: none;
+}
+
+form > input[type="submit"] {
+  float: right;
+  padding: 1.2em;
+  margin-top: 3em;
+  color: white;
+  background: rgb(36, 36, 36);
+  width: 15%;
+}
+/* FOOTER */
+footer {
+  margin-top: 5%;
+  height: 15vh;
+  color: white;
+  font-size: 1.3rem;
+  background: #2a5276;
+}
+
+/* FORM */
+input.ng-invalid.ng-touched {
+  border-bottom: 1px solid red;
+}
+input.ng-valid.ng-dirty {
+  border-bottom: 1px solid lightgreen;
+}
+input[disabled="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+
+/* CONTACT US */
+#contact {
+  min-height: 70vh;
+}
+#contact h1 {
+  font-size: 3em;
+  font-weight: bolder;
+  margin: 2em;
+}
+
+select {
+  width: 400px;
+  height: 50px;
+  font-size: 1.3em;
+}

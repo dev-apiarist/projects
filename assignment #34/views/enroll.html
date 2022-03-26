@@ -1,0 +1,168 @@
+<section class="flex">
+  <div class="form-container flex">
+    <form action="" name="artForm" novalidate>
+      <div class="grid-3 form-header">
+        <div class="flex">
+          <span style="color: rgb(36, 36, 36); font-size: 4em">
+            <i class="fas fa-quidditch"></i>
+          </span>
+        </div>
+        <div>
+          <h3>Potter School of Arts</h3>
+          <table>
+            <tr>
+              <td style="border: none">Reg.No.</td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+          </table>
+        </div>
+        <div id="profile" class>
+          <span class="flex" style="font-size: 5em">
+            <i class="fas fa-user"></i>
+          </span>
+          <p class="flex">Photo Here</p>
+        </div>
+      </div>
+      <h1>Admission Form</h1>
+      <hr />
+      <br />
+      <fieldset>
+        <legend>Personal Details</legend>
+        <div class="grid-4">
+          <label for="">Candidate Name:</label>
+          <div>
+            <input
+              type="text"
+              name="name"
+              ng-model="art.name"
+              ng-required="true"
+            />
+            <span
+              ng-show="artForm.name.$dirty && artForm.name.$invalid || artForm.name.$touched"
+            >
+              Name is required.</span
+            >
+          </div>
+          <label for="">Date of Birth:</label>
+          <div>
+            <input
+              type="date"
+              name="dob"
+              ng-model="art.dob"
+              ng-required="true"
+            />
+            <span
+              ng-show="artForm.dob.$dirty && artForm.dob.$invalid || artForm.dob.$touched"
+            >
+              Field is required.
+            </span>
+          </div>
+          <label for="">Gender:</label>
+          <div class="flex" style="justify-content: space-evenly">
+            <input type="checkbox" name="" id="" />
+            <label for="">Male</label>
+            <input type="checkbox" name="" id="" />
+            <label for="">Female</label>
+          </div>
+          <label for="">Nationality:</label>
+          <input type="text" />
+          <label for="">Email:</label>
+          <div>
+            <input
+              type="email"
+              name="email"
+              ng-model="art.email"
+              ng-required="true"
+            />
+            <span
+              ng-show="artForm.email.$dirty && artForm.email.$invalid || artForm.email.$touched"
+            >
+              <span ng-show="artForm.email.$error.required"
+                >Email is required.</span
+              >
+              <span ng-show="artForm.email.$error.email"
+                >Invalid email address.</span
+              >
+            </span>
+          </div>
+          <label for="">Mother Tongue:</label>
+          <input type="text" />
+          <label for="">Religion:</label>
+          <input type="text" />
+          <label for="">Father's Name:</label>
+          <input type="text" />
+          <label for="">Mother's Name:</label>
+          <input type="text" />
+          <label for="">Guardian's Name:</label>
+          <input type="text" />
+          <label for="">Home Phone.</label>
+          <div>
+            <input
+              type="tel"
+              name="homeTel"
+              id=""
+              ng-model="art.homeTel"
+              ng-required="true"
+            />
+            <span
+              ng-show="artForm.homeTel.$dirty && artForm.homeTel.$invalid || artForm.homeTel.$touched"
+            >
+              Invalid number.</span
+            >
+          </div>
+          <label for="">Telephone No.</label>
+          <div>
+            <input
+              type="tel"
+              name="telNum"
+              id=""
+              ng-model="art.telNum"
+              ng-required="true"
+            />
+            <span
+              ng-show="artForm.telNum.$dirty && artForm.telNum.$invalid ||artForm.telNum.$touched"
+            >
+              Invalid number.
+            </span>
+          </div>
+          <label for="">Address:</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Academic Qualifications</legend>
+        <div class="grid-3">
+          <p>Academic Qualifications</p>
+          <p>Institution</p>
+          <p>Date</p>
+          <input type="text" /><input type="text" /> <input type="text" /><input
+            type="text"
+          />
+          <input type="text" /><input type="text" /> <input type="text" /><input
+            type="text"
+          />
+          <input type="text" />
+        </div>
+        <br />
+        <div class="grid-3">
+          <label for="">Schools Attended</label>
+          <p>From</p>
+          <p>To</p>
+
+          <input type="text" /><input type="text" /><input type="text" />
+          <input type="text" /><input type="text" /><input type="text" />
+          <input type="text" /><input type="text" /><input type="text" />
+          <input type="text" /><input type="text" /><input type="text" />
+        </div>
+        <br />
+      </fieldset>
+      <input type="submit" value="Submit" ng-disabled="artForm.$invalid"/>
+    </form>
+  </div>
+</section>

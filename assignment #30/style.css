@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  scroll-behavior: smooth;
+}
+/* DISPLAYS */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5em;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: rgb(135, 135, 136);
+  width: 100%;
+  height: 15vh;
+  z-index: 1;
+}
+
+.banner {
+  width: 70%;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 0 auto;
+  height: 100%;
+}
+
+header input {
+  padding: 1rem;
+  width: 60%;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.head-icons {
+  width: 13%;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+.head-icons a {
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+}
+
+.overlay-text {
+  margin-top: -10rem;
+  color: white;
+  font-size: 3.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url(https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+      center/cover no-repeat;
+  height: 85vh;
+}
+.register {
+  height: 85vh;
+}
+.cart {
+  height: 85vh;
+  font-family: "Lato", sans-serif;
+}
+/* ANIMATION */
+.icon {
+  position: relative;
+  animation: icon 2s infinite;
+}
+
+.down {
+  position: absolute;
+  top: 90vh;
+}
+
+.down a {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+}
+
+@keyframes icon {
+  from {
+    left: 0vw;
+  }
+  to {
+    left: 2vw;
+  }
+}
+
+/* PARTS */
+
+.full-width {
+  grid-column: 1/4;
+}
+.full-width button {
+  background: rgb(233, 49, 56);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: auto;
+}
+.items {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10em;
+}
+
+article {
+  display: grid;
+  justify-self: center;
+  justify-items: center;
+  width: 90%;
+}
+article h3 {
+  color: #666;
+  height: 50px;
+  overflow: hidden;
+}
+article img {
+  width: 100%;
+  object-fit: cover;
+}
+
+article li {
+  list-style-type: none;
+  text-align: center;
+  background: white;
+  color: #333;
+}
+
+article button {
+  padding: 1.1em;
+  background: rgb(233, 49, 56);
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(233, 49, 56);
+}
+
+/* HOVER */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+/* FOOTER  */
+
+.main-container {
+  height: 37vh;
+  margin: 0 auto;
+  background: #666;
+  color: #ccc;
+}
+.top-container {
+  width: 70%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin: 0 auto;
+}
+.bottom-container {
+  height: 30%;
+  margin: 0 auto;
+  background: #333;
+  justify-content: left;
+}
+.bottom-container p {
+  width: 70%;
+  margin: 0 auto;
+}
+.about {
+  font-size: 14px;
+  width: 80%;
+  height: 70%;
+}
+
+.about h3,
+.about p,
+.about li,
+.about a {
+  margin-bottom: 10px;
+  list-style-type: none;
+  color: #ccc;
+  text-decoration: none;
+}
+.about h3 {
+  text-decoration: underline;
+}
+
+/* ANGULAR ANIMATION */
+/* The starting CSS styles for the enter animation */
+
+main.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.checkout .ng-leave {
+  transition: 0.5s linear all;
+  opacity: 1;
+  transform: translateX(0);
+}
+.checkout .ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* FORM */
+.form-container {
+  width: 30%;
+  height: 90%;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  justify-content: center;
+  gap: 3%;
+}
+form {
+  background: white;
+  padding: 5%;
+  height: 100%;
+  box-shadow: 0px 0px 7px rgb(123, 123, 123);
+  border-radius: 10px;
+}
+
+.full-form {
+  grid-column: 1/3;
+}
+
+form input,
+form textarea,
+form button,
+form select {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background: rgb(233, 49, 56);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  float: right;
+}
+
+form input.ng-invalid.ng-touched {
+  border-bottom: 1px solid rgb(233, 49, 56);
+}
+form input.ng-valid.ng-dirty {
+  border-bottom: 1px solid lightgreen;
+}
+
+/* CART */
+/* .cart-parts {
+} */
+.checkout {
+  min-width: 30%;
+  max-width: 60%;
+  overflow: hidden;
+  background: rgb(228, 228, 228);
+  border-radius: 10px;
+
+  padding: 5%;
+}
+.checkout a {
+  color: red;
+  text-decoration: none;
+}
+.checkout button {
+  width: 200px;
+  padding: 10px 16px;
+  margin-top: 5%;
+  float: right;
+}
+.remove {
+  font-size: 2rem;
+}

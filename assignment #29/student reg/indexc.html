@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <main>
+      <section ng-init="color='grey">
+        <form name="contactForm" action="" class="grid">
+          <h1 class="full-width">Student Registration Form</h1>
+
+          <p>
+            <label for=""> <span style="color: red">* </span> Name:</label>
+            <br /><input type="text" name="" ng-model="Name" required  class="{{color}}"/>
+
+            <span>{{Name}}</span>
+          </p>
+
+          <p>
+            <label for="">
+              <span style="color: red">* </span>Registration No:</label
+            ><br />
+            <input type="text" name="" ng-model="regNum" required />
+            <span>{{regNum}}</span>
+          </p>
+
+          <p class="full-width">
+            <label for="">
+              <span style="color: red">* </span>Date Of Birth:</label
+            >
+            <br />
+            <input type="date" ng-model="dob" />
+          </p>
+          <p>
+            <label for=""> <span style="color: red">* </span>Address:</label>
+            <br /><textarea name="" id="" cols="30" rows="8"></textarea>
+          </p>
+
+          <p>
+            <label for="">
+              <span style="color: red">* </span>Telephone No:</label
+            >
+            <br /><input type="tel" ng-model="tel" placeholder="888-888-8888" />
+            <span>{{tel}}</span>
+          </p>
+          <p>
+            <label for="">Mark 1</label>
+            <input type="checkbox" name="" id="" ng-model="mark1" />
+            <br />
+            <span>You passed with{{mark1}}</span>
+            <br />
+            <label for="">Mark 2</label>
+            <input type="checkbox" name="" id="" />
+
+            <br />
+            <label for="">Mark 3</label>
+            <input type="checkbox" name="" id="" />
+            <br />
+          </p>
+
+          <br />
+
+          <p>
+            <input type="submit" value="Submit" />
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Maps</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .map {
+        margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1, p{
+        padding: 10px;
+        text-align: center;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1 style="color: lightseagreen;">Image Mapping</h1>
+<br>
+    <p>The first two birds are mapped with a rectangle.</p>
+<p>The third bird is mapped with a circle.</p>
+<p>The fourth bird is not mapped.</p>
+    <div class="map">
+      <img
+        src="./img/pexels-ishara-kasthuriarachchi-5829180.jpg"
+        alt="birds"
+        usemap="#workmap"
+        width="579"
+        height="400"
+        style="border: 1px solid black; border-radius: 20px"
+      />
+
+      <map name="workmap">
+        <area
+          shape="rect"
+          coords="100,217,206,258"
+          href="rect.html"
+          alt=""
+          title="Talking Birds"
+        />
+        <area
+          shape="circle"
+          coords="309,205,40"
+          href="circle.html"
+          alt=""
+          title="Chill Bird"
+        />
+      </map>
+    </div>
+  </body>
+</html>

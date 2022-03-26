@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="artApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <script src="app/lib/angular.min.js"></script>
+    <script src="/app/lib/angular-route.min.js"></script>
+    <script src="/app/lib/angular-animate.min.js"></script>
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="top-banner flex" style="justify-content: right">
+        <p>
+          <a
+            href=" mailto:kleslie018@gmail.com "
+            style="color: white; margin-right: 1em; text-decoration: none"
+          >
+            <span><i class="fas fa-envelope"></i></span>Email Us
+          </a>
+
+          <a
+            href="tel:+18763106222"
+            style="color: white; margin-right: 2em; text-decoration: none"
+          >
+            <span>
+              <i class="fas fa-phone"></i>
+            </span>
+            +1 876-310-6222
+          </a>
+        </p>
+      </div>
+
+      <div class="flex">
+        <a
+          href="/#!home
+         "
+          style="color: #2a5276; font-size: 3em"
+        >
+          <i class="fas fa-quidditch"></i>
+        </a>
+        <nav>
+          <ul class="flex">
+            <li>
+              <a href="/#!home">HOME</a>
+            </li>
+            <li>
+              <a href="/#!about">ABOUT</a>
+            </li>
+            <li><a href="/#!enroll">ENROLL</a></li>
+            <li><a href="/#!contact">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr />
+    </header>
+    <main ng-view></main>
+    <footer class="flex">
+      <p>&copy; COPYRIGHT 2021</p>
+    </footer>
+  </body>
+</html>

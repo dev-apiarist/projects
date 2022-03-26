@@ -1,0 +1,20 @@
+<section class="items grid">
+  <div class="full-width flex">
+    <button ng-click=" order = 'name' ">Order By Name</button>
+    <button ng-click=" order = 'price' ">Order By Price</button>
+  </div>
+
+  <article ng-repeat="part in parts | orderBy: order | filter: search">
+    <ul>
+      <li>
+        <img ng-src="{{part.photo}}" alt="" />
+        <h3>{{part.name}}</h3>
+        <hr />
+        <br />
+        <p style="font-weight: bold">{{part.price | currency: "₹"}}</p>
+      </li>
+    </ul>
+    <br />
+    <button ng-click="addCart(part)">Add to Cart</button>
+  </article>
+</section>

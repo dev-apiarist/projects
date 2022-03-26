@@ -1,0 +1,109 @@
+<section
+  class="grid-2"
+  id="height"
+  style="justify-items: center; align-items: center"
+>
+  <div class="checkout">
+    <h3>MY CART</h3>
+    <hr />
+    <br />
+    <div class="grid-5" ng-repeat="glass in cart track by $index">
+      <p class="remove float-right" ng-click="removeItem($index)">&times;</p>
+      <p>{{glass.qty}}</p>
+      <p>
+        <img
+          ng-src="{{glass.photo}}
+        "
+          alt=""
+          width="100"
+        />
+      </p>
+      <p>{{glass.name}}</p>
+
+      <p>{{glass.price | currency: "₹"}}</p>
+    </div>
+    <p>
+      <a href="#!/glasses"
+        ><span style="font-size: 1.2rem">+</span> Add items in cart.</a
+      >
+    </p>
+    <br />
+
+    <p>Total: {{total | currency: "₹"}}</p>
+  </div>
+  <div class="form-container">
+    <form action="" name="paymentForm" novalidate>
+      <h1 class="full-form flex">
+        --------------PAYMENT DETAILS---------------
+      </h1>
+
+      <label for="">Cardholder Name</label>
+      <div>
+        <input
+          type="text"
+          ng-required="true"
+          name="cardholder"
+          ng-model="paymentcardholder"
+        />
+        <span
+          style="float: right"
+          ng-show="paymentForm.cardholder.$dirty && paymentForm.cardholder.$invalid || paymentForm.cardholder.$touched && paymentForm.cardholder.$invalid"
+        >
+          Name is required.</span
+        >
+      </div>
+      <label for="">Card Number</label>
+      <div>
+        <input
+          name="cardnumber"
+          ng-model="paymentnumber"
+          type="number"
+          placeholder="8888-8888-8888-8888"
+          ng-required="true"
+        />
+        <span
+          style="float: right"
+          ng-show="paymentForm.cardnumber.$dirty && paymentForm.cardnumber.$invalid || paymentForm.cardnumber.$touched && paymentForm.cardnumber.$invalid"
+        >
+          Enter a valid number.</span
+        >
+      </div>
+
+      <label for="">Expiration Date</label>
+      <div>
+        <input
+          type="month"
+          name="expiration"
+          ng-model="expirationDate"
+          id=""
+          ng-required="true"
+        />
+        <span
+          style="float: right"
+          ng-show="paymentForm.expiration.$dirty && paymentForm.expiration.$invalid || paymentForm.expiration.$touched && paymentForm.expiration.$invalid"
+          >Invalid date.
+        </span>
+      </div>
+
+      <label for=""
+        ><span><i class="fas fa-credit-card"></i></span> CVC</label
+      >
+      <div>
+        <input
+          type="number"
+          name="cvc"
+          ng-model="paymentCVC"
+          placeholder="888"
+          ng-required="true"
+        />
+        <span
+          style="float: right"
+          ng-show="paymentForm.cvc.$dirty && paymentForm.cvc.$invalid || paymentForm.cvc.$touched && paymentForm.cvc.$invalid"
+        >
+          Invalid CVC
+        </span>
+      </div>
+      <button class="paymentBtn">Checkout</button>
+    </form>
+  </div>
+</section>

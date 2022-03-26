@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bikeApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Throttle</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <script src="/app/lib/angular.min.js"></script>
+    <script src="/app/lib/angular-route.min.js"></script>
+    <script src="/app/lib/angular-animate.min.js"></script>
+    <script src="/app/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body ng-controller="bikeController">
+    <header>
+      <div class="banner flex">
+        <a href="/#!home">
+          <img src="/img/cropped-throttle-Racers-logo.png" alt="" width="" />
+        </a>
+        <input
+          type="search"
+          name=""
+          id=""
+          placeholder="Search..."
+          ng-model="search"
+        />
+        <div class="head-icons flex">
+          <a href="/#!register">
+            <span>
+              <i class="fa fa-user"></i>
+            </span>
+          </a>
+          <span style="color: black">|</span>
+          <a href="/#!parts">
+            <span>
+              <i class="fas fa-cogs"></i>
+            </span>
+          </a>
+          <span style="color: black">|</span>
+          <a href="/#!cart">
+            <span>
+              <i class="fas fa-shopping-cart"></i>
+              <span
+                style="color: black; font-weight: bold"
+                ng-show="cart.length > 0"
+              >
+                {{cart.length}}</span
+              >
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main ng-view></main>
+    <footer ng-include="'footer.html'"></footer>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iFrame</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      header {
+        text-align: center;
+        font-size: 2rem;
+        padding: 1%;
+        color: white;
+        background: rgba(128, 0, 0, 0.8);
+        margin-bottom: 3%;
+      }
+      main {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        height: 80vh;
+      }
+      p {
+        letter-spacing: 1px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        margin-top: 5%;
+        width: 30%;
+        margin-right: 3%;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="background-video" autoplay loop muted>
+      <source
+        src="./video/pexels-anna-nekrashevich-7946010.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <header><h1>iFrame</h1></header>
+
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        provident beatae laboriosam fugiat minima consequatur error impedit?
+        Ipsa illo modi maxime quia iure est deleniti alias cum odio magni. Dolor
+        illum suscipit ipsa ipsam eaque delectus consequuntur nemo dolorum
+        aliquid, placeat doloribus iure fugit repudiandae aut voluptatibus,
+        rerum maxime necessitatibus!
+      </p>
+      <iframe
+        src="./index.html"
+        width="50%
+        "
+        height="90%
+
+        "
+        style="border: 5px solid white"
+      ></iframe>
+    </main>
+  </body>
+</html>

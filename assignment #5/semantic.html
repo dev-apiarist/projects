@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Tags</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .India {
+        background-color: pink;
+        color: brown;
+        margin: 20px;
+        padding: 20px;
+      }
+      .Jamaica {
+        background-color: brown;
+        color: pink;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      details {
+        padding: 10px;
+        text-decoration: underline;
+      }
+      nav a {
+        background: white;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        font-size: 15px;
+        justify-content: center;
+      }
+      img {
+        width: 300px;
+      }
+      aside {
+        background: beige;
+        display: flex;
+        width: 20%;
+        margin: 20px;
+        color: black;
+      }
+      footer {
+        background: white;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#in">India</a>
+      <hr />
+      <a href="#ja">Jamaica</a>
+    </nav>
+
+    <main>
+      <section class="India">
+        <a id="in"></a>
+        <article>
+          <header><h2>India</h2></header>
+          <figure>
+            <img src="./img/1200px-Flag_of_India.svg.png" alt="" />
+          </figure>
+
+          <details>
+            <summary>Images</summary>
+            <figure>
+              <img src="./img/pexels-syed-shah-hussain-1722318.jpg" alt="" />
+            </figure>
+            <figcaption>Taj Mahal</figcaption>
+            <figure>
+              <img src="./img/pavan-gupta-_HzlOHmboSk-unsplash.jpg" alt="" />
+            </figure>
+            <figcaption>Traditional Dance</figcaption>
+          </details>
+          <p>
+            A huge part of what makes India such a
+            <mark>great</mark> destination to travel to, is its people. Sure,
+            they can be a handful sometimes and they are definitely as
+            contradictory and diverse as they come.
+          </p>
+        </article>
+      </section>
+      <aside>
+        But for all the natural beauty this vast country boasts, the Indian
+        tourist experience is far from complete without its beautiful, riotous,
+        and chaotic populace!.
+      </aside>
+
+      <section class="Jamaica">
+        <a id="ja"></a>
+        <article>
+          <header><h2 id="ja">Jamaica</h2></header>
+          <figure>
+            <img src="./img/125px-Flag_of_Jamaica.svg.png" alt="" />
+          </figure>
+          <details open>
+            <summary>Images</summary>
+            <figure>
+              <img src="./img/pexels-lyncoln-miller-6473888.jpg" alt="" />
+              <figcaption>River Swing</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/JamaicaReopen_Negril.jpg" alt="" />
+              <figcaption>Negril Beach</figcaption>
+            </figure>
+          </details>
+          <p>
+            Jamaica is the <mark>fourth</mark> largest Caribbean island,
+            following Cuba, Hispaniola and Puerto Rico. Being in this group of
+            islands in the Greater Antilles makes Jamaica the largest
+            English-speaking island in the Caribbean.amaica is a culturally
+            diverse country.The population of approximately 3 million people is
+            made up of African, European, East Indian and Chinese heritage.
+          </p>
+        </article>
+      </section>
+      <aside>
+        <p>
+          The island’s motto is “Out of Many, One People”, an ode to Jamaica’s
+          multi-racial and multi-cultural history.
+        </p>
+      </aside>
+    </main>
+    <footer>Created <time>9:26</time></footer>
+  </body>
+</html>

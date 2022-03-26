@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBS Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <style>
+      .item {
+        position: relative;
+      }
+      .item img:hover {
+        transform: scale(1.05);
+        filter: brightness(90%);
+      }
+      .item:hover button {
+        display: block;
+      }
+      .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .container {
+        height: calc(100vh - 140px);
+        display: flex;
+        overflow: hidden;
+        color: white;
+      }
+      .text {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        font-size: 18px;
+      }
+      button {
+        margin-top: 50px;
+        display: none;
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px 12px;
+        background: red;
+        border: none;
+        font-size: 1em;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="home2.html"><img src="./img/dbs_logo.svg" alt="" /></a>
+      </div>
+      <div class="btn-grp">
+        <div class="btn">
+          India &nbsp;<span><i class="fas fa-caret-down"></i></span>
+        </div>
+        <div class="btn" style="background: red; color: white">
+          <span><i class="fas fa-lock" style="color: white"></i></span
+          >&nbsp;Login
+        </div>
+        <div class="btn">
+          <a
+            href="registration.html"
+            style="text-decoration: none; color: black"
+            >Register</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="item">
+        <img src="./img/digibank.jpg" alt="" />
+        <div class="text">
+          <h1>digibank</h1>
+          <br />
+          <p>
+            Instant, Intelligent & Intuitive. A fully digital bank 24*7 on your
+            phone. Get digibank account now!
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="./img/Treasures.jpg" alt="" />
+        <div class="text">
+          <h1>Treasures</h1>
+          <br />
+          <p style="width: 60%">
+            Explore our comprehensive range of banking and wealth management
+            solutions for Resident and Non-Resident Indians
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="navbar">
+      <li><a href="">DBS Bank India</a></li>
+      <li><a href="">Personal Banking</a></li>
+      <li><a href="">Corporate and SME</a></li>
+      <li><a href="">DBS Asia Hub 2</a></li>
+      <li><a href="">Know More</a></li>
+    </div>
+  </body>
+</html>

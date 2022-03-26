@@ -1,0 +1,17 @@
+<section class="cart flex">
+  <div class="checkout">
+    <h1>My Cart</h1>
+    <br />
+    <span ng-show="{{cart.length == 0}}">
+      <a href="#!/parts"> Add items in cart.</a>
+    </span>
+    <div id="cartList" class="grid" ng-repeat="item in cart track by $index">
+      <p class="remove" ng-click="removeItem(item)">&times;</p>
+      <p>{{item.name}}</p>
+      <p>{{item.price | currency: "₹"}}</p>
+    </div>
+    <hr />
+
+    <button>Checkout</button>
+  </div>
+</section>
